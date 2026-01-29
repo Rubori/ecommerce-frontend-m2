@@ -6,7 +6,7 @@ Propósito del Proyecto
 El objetivo principal fue construir una tienda que permita navegar por un catálogo de productos, ver detalles específicos y gestionar un carrito de compras básico, asegurando una buena experiencia de usuario tanto en computadores como en dispositivos móviles.
 
 Funcionalidades Principales
-Catálogo Dinámico: Los productos (Bubambilias) se generan automáticamente en la página principal usando JavaScript, lo que facilita el mantenimiento del catálogo.
+Catálogo Dinámico: Los productos (Bugambilias) se generan automáticamente en la página principal usando JavaScript, lo que facilita el mantenimiento del catálogo.
 
 Navegación de Detalles: Al hacer clic en "Ver más", el sitio redirige a una página específica que muestra la información detallada del producto seleccionado.
 
