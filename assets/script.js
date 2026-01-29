@@ -1,7 +1,7 @@
 const productos = [
-    { id: 1, nombre: "Producto A", precio: 10000, img: "https://via.placeholder.com/150" },
-    { id: 2, nombre: "Producto B", precio: 15000, img: "https://via.placeholder.com/150" },
-    { id: 3, nombre: "Producto C", precio: 20000, img: "https://via.placeholder.com/150" }
+    { id: 1, nombre: "Bubambilia Amarilla", precio: 10000, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkIVBj8gmsfA76DddUwstiUPUpC5BSHCDolQ&s" },
+    { id: 2, nombre: "Bugambilia Burdeo", precio: 15000, img: "https://plantket.cl/plantket-cl/888-medium_default/bouganvillea-pie-alto.jpg" },
+    { id: 3, nombre: "Bugambilia Café", precio: 20000, img: "https://www.shutterstock.com/image-photo/close-orange-bouganvilla-flowers-bush-260nw-1689456745.jpg" }
 ];
 
 $(document).ready(function() {
