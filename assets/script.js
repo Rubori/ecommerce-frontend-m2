@@ -26,3 +26,15 @@ function renderizarProductos() {
         `);
     });
 }
+
+function agregarAlCarrito() {
+    let cuenta = parseInt(localStorage.getItem('cartCount')) || 0;
+    cuenta++;
+    localStorage.setItem('cartCount', cuenta);
+    actualizarContador();
+}
+
+function actualizarContador() {
+    let cuenta = localStorage.getItem('cartCount') || 0;
+    $('#cart-count').text(cuenta);
+}

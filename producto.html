@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu planta deseada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<bodyclass="d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Mi Tienda</a>
+                <div class="ms-auto">
+                    <a href="#" class="btn btn-outline-light">
+                        Carrito <span id="cart-count" class="badge bg-danger">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row" id="detalle-producto">
+            </div>
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-secondary">Volver a la tienda</a>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center py-4 mt-auto">
+        <p>&copy; 2026 Gabo Pulgar - Ecommerce MVP</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/script.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // 1. Obtener el ID de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = parseInt(urlParams.get('id'));
+
+            // 2. Buscar el producto en nuestro arreglo (definido en script.js)
+            const p = productos.find(item => item.id === id);
+
+            if(p) {
+                $('#detalle-producto').html(`
+                    <div class="col-md-6">
+                        <img src="${p.img}" class="img-fluid rounded" alt="${p.nombre}">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>${p.nombre}</h2>
+                        <h3 class="text-success">$${p.precio}</h3>
+                        <p class="lead">Esta es una descripción detallada de nuestro producto estrella.</p>
+                        <button class="btn btn-success btn-lg" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+                    </div>
+                `);
+            } else {
+                $('#detalle-producto').html('<h2>Producto no encontrado</h2>');
+            }
+            
+            // 3. Actualizar el contador al cargar
+            actualizarContador();
+        });
+    </script>
+    
+</body>
+</html>
